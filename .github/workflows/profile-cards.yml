@@ -1,0 +1,51 @@
+name: Update profile cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # her gün 06:00 (TR saati)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/profile-cards.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&hide_rank=true&hide_border=true&bg_color=0E1420&title_color=22D3EE&icon_color=C084FC&text_color=E2E8F2&custom_title=GitHub%20Stats
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&bg_color=0E1420&title_color=22D3EE&text_color=E2E8F2
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            profile/snake.svg?palette=github-light&color_snake=#E879F9&color_dots=#EBEDF0,#A5F3FC,#22D3EE,#818CF8,#C084FC
+            profile/snake-dark.svg?palette=github-dark&color_snake=#34D399&color_dots=#161B22,#155E75,#2563EB,#818CF8,#E879F9
+
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "Update profile cards" || exit 0
+          git push

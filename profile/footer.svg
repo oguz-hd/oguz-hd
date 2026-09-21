@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 120" width="1000" height="120" preserveAspectRatio="none" role="img" aria-label="">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#131A24"/><stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="fw1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2D4A63"/><stop offset="50%" stop-color="#3C6488"/><stop offset="100%" stop-color="#2D4A63"/>
+    </linearGradient>
+    <linearGradient id="fw2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#25404F"/><stop offset="50%" stop-color="#31586B"/><stop offset="100%" stop-color="#25404F"/>
+    </linearGradient>
+    <clipPath id="fc"><rect width="1000" height="120" rx="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#fc)">
+    <rect width="1000" height="120" fill="url(#fbg)"/>
+    <path d="M-360 56 C -240 34, -120 78, 0 56 S 240 34, 360 56 S 600 78, 720 56 S 960 34, 1080 56 S 1320 78, 1440 56 L1440 120 L-360 120 Z" fill="url(#fw2)" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -360 0" dur="20s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-360 74 C -240 52, -120 96, 0 74 S 240 52, 360 74 S 600 96, 720 74 S 960 52, 1080 74 S 1320 96, 1440 74 L1440 120 L-360 120 Z" fill="url(#fw1)" opacity="0.8">
+      <animateTransform attributeName="transform" type="translate" values="-360 0; 0 0" dur="28s" repeatCount="indefinite"/>
+    </path>
+    <g fill="#7FB3E8" opacity="0.5">
+      <circle cx="200" cy="30" r="1.6"><animate attributeName="opacity" values="0.1;0.6;0.1" dur="6s" repeatCount="indefinite"/></circle>
+      <circle cx="520" cy="22" r="1.3"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="8s" repeatCount="indefinite"/></circle>
+      <circle cx="800" cy="34" r="1.8"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="7s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+</svg>

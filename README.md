@@ -48,43 +48,43 @@
 
 ## Featured Projects · Öne Çıkan Projeler
 
-**[SSO-System](https://github.com/oguz-hd/SSO-System)**
-University SSO and information platform on a microservice architecture: role-based access matrix, live audit logs, internship portal and a RAG-powered AI assistant.
-<sub>Mikroservis mimarili üniversite SSO ve bilgi platformu: rol bazlı yetki matrisi, canlı loglar, staj portalı ve RAG destekli yapay zeka asistanı.</sub>
+**[SSO-System](https://github.com/oguz-hd/SSO-System)**<br />
+University SSO and information platform on a microservice architecture: role-based access matrix, live audit logs, internship portal and a RAG-powered AI assistant.<br />
+<sub>Mikroservis mimarili üniversite SSO ve bilgi platformu: rol bazlı yetki matrisi, canlı loglar, staj portalı ve RAG destekli yapay zeka asistanı.</sub><br />
 `Next.js` `FastAPI` `RabbitMQ` `PostgreSQL` `Redis` `Docker`
 
-**[restart-rooter](https://github.com/oguz-hd/restart-rooter)**
-One-click (or fully automatic) modem reboot. Replays the router's RSA-encrypted login flow and keeps the password safe with Windows DPAPI.
-<sub>Tek tıkla ya da tamamen otomatik modem yeniden başlatıcı. Modemin RSA şifreli giriş akışını taklit eder, şifreyi Windows DPAPI ile saklar.</sub>
+**[restart-rooter](https://github.com/oguz-hd/restart-rooter)**<br />
+One-click (or fully automatic) modem reboot. Replays the router's RSA-encrypted login flow and keeps the password safe with Windows DPAPI.<br />
+<sub>Tek tıkla ya da tamamen otomatik modem yeniden başlatıcı. Modemin RSA şifreli giriş akışını taklit eder, şifreyi Windows DPAPI ile saklar.</sub><br />
 `PowerShell`
 
-**[Smart Parking](https://github.com/oguz-hd/smartParkingSystemwithFirebase)**
-ESP32 and ultrasonic sensors count cars in real time, sync to Firebase and drive a live web dashboard with LCD and buzzer alerts.
-<sub>ESP32 ve ultrasonik sensörlerle anlık araç sayımı; Firebase senkronizasyonu, canlı web paneli, LCD ve buzzer uyarıları.</sub>
+**[Smart Parking](https://github.com/oguz-hd/smartParkingSystemwithFirebase)**<br />
+ESP32 and ultrasonic sensors count cars in real time, sync to Firebase and drive a live web dashboard with LCD and buzzer alerts.<br />
+<sub>ESP32 ve ultrasonik sensörlerle anlık araç sayımı; Firebase senkronizasyonu, canlı web paneli, LCD ve buzzer uyarıları.</sub><br />
 `ESP32` `Firebase` `JavaScript`
 
-**[anka-llm](https://github.com/oguz-hd/anka-llm)**
-Gemini-powered AI chat assistant with a React client and a Node.js server.
-<sub>React istemcisi ve Node.js sunucusuyla Gemini tabanlı yapay zeka asistanı.</sub>
+**[anka-llm](https://github.com/oguz-hd/anka-llm)**<br />
+Gemini-powered AI chat assistant with a React client and a Node.js server.<br />
+<sub>React istemcisi ve Node.js sunucusuyla Gemini tabanlı yapay zeka asistanı.</sub><br />
 `React` `Node.js` `Gemini API`
 
-**[Ege Emlak](https://github.com/oguz-hd/realEstateAgentWebsite)**
-Real estate automation: a FastAPI REST API with image upload, on top of a normalized SQL Server database.
-<sub>Emlak otomasyonu: normalize edilmiş SQL Server veritabanı üzerinde, görsel yüklemeli FastAPI REST API.</sub>
+**[Ege Emlak](https://github.com/oguz-hd/realEstateAgentWebsite)**<br />
+Real estate automation: a FastAPI REST API with image upload, on top of a normalized SQL Server database.<br />
+<sub>Emlak otomasyonu: normalize edilmiş SQL Server veritabanı üzerinde, görsel yüklemeli FastAPI REST API.</sub><br />
 `FastAPI` `Python` `SQL Server`
 
-**505letter** · [basic](https://github.com/oguz-hd/505letter-basic) · [Django](https://github.com/oguz-hd/505letter-djangoo) · [React](https://github.com/oguz-hd/505letter-react)
-The same movie collection and rating app, built three times with three different stacks.
-<sub>Aynı film arşivi ve puanlama uygulaması, üç farklı teknolojiyle üç kez.</sub>
+**505letter** · [basic](https://github.com/oguz-hd/505letter-basic) · [Django](https://github.com/oguz-hd/505letter-djangoo) · [React](https://github.com/oguz-hd/505letter-react)<br />
+The same movie collection and rating app, built three times with three different stacks.<br />
+<sub>Aynı film arşivi ve puanlama uygulaması, üç farklı teknolojiyle üç kez.</sub><br />
 `HTML` `Django` `React`
 
-**Qt apps** · [orders](https://github.com/oguz-hd/orderManagementSystemwithQT) · [car rental](https://github.com/oguz-hd/carRentalManagementSystemwithQT)
-PySide6 desktop apps for restaurant orders and car rentals.
-<sub>Restoran siparişleri ve araç kiralama için PySide6 masaüstü uygulamaları.</sub>
+**Qt apps** · [orders](https://github.com/oguz-hd/orderManagementSystemwithQT) · [car rental](https://github.com/oguz-hd/carRentalManagementSystemwithQT)<br />
+PySide6 desktop apps for restaurant orders and car rentals.<br />
+<sub>Restoran siparişleri ve araç kiralama için PySide6 masaüstü uygulamaları.</sub><br />
 `Python` `Qt` `PySide6`
 
-I also write beginner guides: [Markdown](https://github.com/oguz-hd/use-of-mark-down) and [YAML for Docker](https://github.com/oguz-hd/use-of-yaml-docker).
-<sub>Yeni başlayanlar için rehberler de yazıyorum: Markdown ve Docker için YAML.</sub>
+I also write beginner guides: [Markdown](https://github.com/oguz-hd/use-of-mark-down) and [YAML for Docker](https://github.com/oguz-hd/use-of-yaml-docker).<br />
+<sub>Yeni başlayanlar için rehberler de yazıyorum: Markdown ve Docker için YAML.</sub><br />
 
 <p align="center">
   <img src="./profile/divider.svg" width="100%" alt="" />

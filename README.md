@@ -12,3 +12,7 @@
   Building from the database to the UI, sometimes down to the hardware.<br />
   <sub>Veritabanından arayüze, bazen donanıma kadar.</sub>
 </p>
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: light)" srcset="./profile/stack-light.svg" /><img src="./profile/stack.svg" alt="Stack — backend: Python, FastAPI, Django, Node.js · frontend: TypeScript, React, Next.js, Qt · infra: Docker, RabbitMQ, PostgreSQL, Redis · hardware: ESP32, sensors, Firebase" width="100%" /></picture>
+</p>

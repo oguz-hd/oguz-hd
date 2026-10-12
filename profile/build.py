@@ -133,6 +133,57 @@ def header(P):
     return svg(W, H, name + role + site, css, body, f"{name} — junior developer")
 
 
+# ── Teknoloji tayfı ────────────────────────────────────────────────────────
+# Başlıktaki tayf burada dört banda iner: her bant bir renk, üstünde o işin araçları.
+# Işık başlıktaki akış bittikten sonra bantlara geçer (aynı 7 sn'lik döngü).
+BANDS = [  # (bant, araçlar, tayf sırası, dalga boyu)
+    ("backend", "python · fastapi · django · node.js", 0, 410),
+    ("frontend", "typescript · react · next.js · qt", 2, 490),
+    ("infra", "docker · rabbitmq · postgresql · redis", 4, 580),
+    ("hardware", "esp32 · sensors · firebase", 6, 660),
+]
+
+
+def stack(P):
+    W, top, step = 840, 100, 44
+    H = top + step * (len(BANDS) - 1) + 44
+    lx, tx, period, loop0 = 110, 236, 7, 4.3
+    rows, grads = "", ""
+    for i, (band, tools, ci, nm) in enumerate(BANDS):
+        c, y = P["acc"][ci], top + i * step
+        ly, d = y - 8, 0.25 + i * 0.12
+        grads += (f'<linearGradient id="s{i}" gradientUnits="userSpaceOnUse" x1="0" x2="{lx}" y1="0" y2="0">'
+                  f'<stop stop-color="{c}" stop-opacity="0"/><stop offset="1" stop-color="{c}"/></linearGradient>')
+        tw = len(tools) * 22 * ADV
+        rows += (
+            f'<line class="d" pathLength="1" x1="0" y1="{ly}" x2="{lx}" y2="{ly}" stroke="url(#s{i})" stroke-width="1.5" '
+            f'style="animation:draw .7s {d:.2f}s cubic-bezier(.2,.7,.2,1) backwards"/>'
+            f'<line class="run" pathLength="1" x1="0" y1="{ly}" x2="{lx}" y2="{ly}" stroke="{P["light"]}" stroke-width="2.5" stroke-linecap="round" '
+            f'style="animation-delay:{loop0 + i * 0.08:.2f}s"/>'
+            f'<circle cx="{lx}" cy="{ly}" r="2.5" fill="{c}" style="animation:fade .3s {d + 0.6:.2f}s backwards,flash {period}s {loop0 + 0.7 + i * 0.08:.2f}s ease-out infinite"/>'
+            f'<g style="animation:fade .4s {d + 0.6:.2f}s backwards"><text x="{lx + 16}" y="{y - 10}" font-size="11" letter-spacing="2" fill="{c}">{band.upper()}</text>'
+            f'<text x="{lx + 16}" y="{y + 3}" font-size="11" fill="{P["faint"]}">{nm} nm</text></g>'
+            f'<text x="{tx}" y="{y}" font-size="22" fill="{P["ink"]}">{tools}</text>'
+            f'<rect x="{tx - 4}" y="{y - 22}" width="{tw + 12:.0f}" height="30" fill="{P["ground"]}" '
+            f'style="transform:translateX({tw + 8:.0f}px);animation:wipe .7s {d + 0.75:.2f}s steps({len(tools)}) backwards"/>'
+        )
+    css = (
+        "@keyframes flash{0%{filter:none}4%{filter:brightness(1.6)}14%,100%{filter:none}}"
+        "@keyframes run{0%{stroke-dashoffset:.1}9%,100%{stroke-dashoffset:-1}}"
+        f".run{{stroke-dasharray:.1 1.2;stroke-dashoffset:.1;animation:run {period}s linear infinite}}"
+        ".e{animation:fade .5s .1s backwards}"
+    )
+    body = (
+        f'<defs>{grads}<clipPath id="c"><rect width="{W}" height="{H}" rx="12"/></clipPath></defs>'
+        f'<g clip-path="url(#c)"><rect width="{W}" height="{H}" fill="{P["ground"]}"/>'
+        f'<text class="e" x="48" y="44" font-size="11" letter-spacing="2" fill="{P["faint"]}">STACK</text>'
+        f"{rows}</g>"
+        f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="11.5" stroke="{P["line"]}"/>'
+    )
+    text = "STACK nm0123456789" + "".join(b.upper() + t for b, t, _, _ in BANDS)
+    return svg(W, H, text, css, body, "Stack: " + "; ".join(f"{b}: {t}" for b, t, _, _ in BANDS))
+
+
 # ── B1 · Rozetler ──────────────────────────────────────────────────────────
 # Simgeler 7×7 piksel; 2 px'lik hücre, 22 px'teki Departure Mono pikseline eşit.
 ICONS = {
@@ -165,6 +216,7 @@ def main():
         sfx = "" if mode == "dark" else "-light"
         files = {
             "header": header(P),
+            "stack": stack(P),
             "link-site": chip(P, "oguzhd.com", "globe", None, "oguzhd.com"),
             "link-linkedin": chip(P, "linkedin", "in", 1, "LinkedIn"),
             "link-mail": chip(P, "e-mail", "mail", 0, "E-mail"),

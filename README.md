@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://oguzhd.com"><picture><source media="(prefers-color-scheme: light)" srcset="./profile/link-site-light.svg" /><img src="./profile/link-site.svg" alt="oguzhd.com" /></picture></a>
   <a href="https://www.linkedin.com/in/oguz-han-duran/"><picture><source media="(prefers-color-scheme: light)" srcset="./profile/link-linkedin-light.svg" /><img src="./profile/link-linkedin.svg" alt="LinkedIn" /></picture></a>
-  <a href="https://oguzhd.com/#iletisim"><picture><source media="(prefers-color-scheme: light)" srcset="./profile/link-mail-light.svg" /><img src="./profile/link-mail.svg" alt="E-mail" /></picture></a>
+  <a href="mailto:contact@oguzhd.com"><picture><source media="(prefers-color-scheme: light)" srcset="./profile/link-mail-light.svg" /><img src="./profile/link-mail.svg" alt="E-mail" /></picture></a>
 </p>
 
 <p align="center">

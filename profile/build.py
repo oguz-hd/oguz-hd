@@ -18,14 +18,14 @@ from fontTools.ttLib import TTFont
 HERE = Path(__file__).parent
 FONT = HERE / "fonts" / "DepartureMono-Regular.woff2"
 
-# Koyu: oguzhd.com'un "Tayf" paleti, zemin grafit. Açık: lavanta kâğıt, tayfın koyulaştırılmış hâli
-# (zeminler GitHub'ın kendi renklerinden ayrışsın diye seçildi: D3 + C4, 12.10.2026)
+# Koyu: oguzhd.com'un "Tayf" paleti. Açık: aynı tayfın koyulaştırılmış hâli
+# (grafit/lavanta denendi, 12.10.2026'da GitHub'a yakın ilk zeminlere dönüldü)
 # (beyaz zeminde okunsun diye); beyaz ışık açık zeminde görünmez, ink rengine döner.
 PALETTES = {
-    "dark": dict(ground="#14161C", line="#2A2E38", ink="#E4E9F4", dim="#98A2BA", faint="#7C879F",
+    "dark": dict(ground="#070A12", line="#1C2436", ink="#E4E9F4", dim="#98A2BA", faint="#7C879F",
                  lead="#22D3EE", light="#FFFFFF", star="#98A2BA",
                  acc=["#A78BFA", "#60A5FA", "#22D3EE", "#4ADE80", "#FACC15", "#FB923C", "#F87171"]),
-    "light": dict(ground="#ECEFFC", line="#CDD4F2", ink="#0F1420", dim="#4A5468", faint="#5F6A80",
+    "light": dict(ground="#F7F9FC", line="#D8DEE9", ink="#0F1420", dim="#4A5468", faint="#5F6A80",
                   lead="#0891B2", light="#0891B2", star="#B4BDCC",
                   acc=["#7C3AED", "#2563EB", "#0891B2", "#16A34A", "#CA8A04", "#EA580C", "#DC2626"]),
 }
